@@ -2,10 +2,12 @@
   "name": "numberbaseballgame",
   "version": "1.0.0",
   "description": "## 🎯 기능 요구사항",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "dev": "nw src/",
-    "prod": "nwbuild --platforms win32,win64,osx64,linux32,linux64 --buildDir dist/ src/"
+    "dev:nw": "nw src/",
+    "prod:nw": "nwbuild --platforms win32,win64,osx64,linux32,linux64 --buildDir dist/ src/",
+    "dev:electron": "electron main.js",
+    "prod:electron": "electron-builder --win portable --x64"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,8 @@
   },
   "homepage": "https://github.com/GeonWooPaeng/NumberBaseballGame#readme",
   "devDependencies": {
+    "electron": "^25.2.0",
+    "electron-builder": "^24.4.0",
     "nw": "^0.77.0-sdk",
     "nw-builder": "3.5.7"
   }

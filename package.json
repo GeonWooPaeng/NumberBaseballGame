@@ -1,0 +1,25 @@
+{
+  "name": "numberbaseballgame",
+  "version": "1.0.0",
+  "description": "## 🎯 기능 요구사항",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nw src/",
+    "prod": "nwbuild --platforms win32,win64,osx64,linux32,linux64 --buildDir dist/ src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeonWooPaeng/NumberBaseballGame.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeonWooPaeng/NumberBaseballGame/issues"
+  },
+  "homepage": "https://github.com/GeonWooPaeng/NumberBaseballGame#readme",
+  "devDependencies": {
+    "nw": "^0.77.0-sdk",
+    "nw-builder": "3.5.7"
+  }
+}

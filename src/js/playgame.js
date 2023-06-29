@@ -1,5 +1,5 @@
-import CheckBallStrike from "./ballstrike.js";
-import GetComRandomNum from "./comnum.js";
+import CheckBallStrike from './ballstrike.js';
+import GetComRandomNum from './comnum.js';
 
 export function GetPersonNums() {
   const $user_input = document.getElementById('user-input');
@@ -26,6 +26,7 @@ function CheckPersonNums(nums) {
 
 export function PlayGame(comNums, nums) {
   // 태그가 반복 되는 것이 아닙니다.
+  const $app = document.getElementById('app');
   const $submit = document.getElementById('submit');
   const $result = document.getElementById('result');
 
@@ -35,16 +36,23 @@ export function PlayGame(comNums, nums) {
     if (!CheckPersonNums(nums)) {
       window.alert('문자를 잘못 입력했습니다.');
       $result.innerText = '';
-    }
-    else {
+    } else {
       CheckBallStrike($result, comNums, nums);
     }
     console.log(comNums);
-  })
+  });
+
+  $app.addEventListener('keypress', (event) => {
+    if (event.key == 'Enter') {
+      event.preventDefault();
+      $submit.click();
+    }
+  });
+
   $result.addEventListener('click', ({ target }) => {
     if (target.id === 'game-restart-button') {
       comNums = GetComRandomNum();
       ResetPage();
     }
-  })
+  });
 }

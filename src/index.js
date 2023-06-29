@@ -1,5 +1,5 @@
-import { GetPersonNums, PlayGame } from "./playgame.js";
-import GetComRandomNum from "./comnum.js";
+import { GetPersonNums, PlayGame } from './js/playgame.js';
+import GetComRandomNum from './js/comnum.js';
 
 export default function BaseballGame() {
   this.play = function (computerInputNumbers, userInputNumbers) {
@@ -15,5 +15,3 @@ export default function BaseballGame() {
 // }
 
 new BaseballGame();
-
-

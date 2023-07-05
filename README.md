@@ -34,4 +34,6 @@ npm run prod:electron // build program
 
 If you need more imformation please enter my Blog :)
 
-BlogLink:
+BlogLink: https://gwpaeng.tistory.com/458
+
+Bonus Make Package Blog Link: 
